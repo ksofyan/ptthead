@@ -38,7 +38,6 @@
 	margin: 0;
 	padding: 0;
 	
-	
 }
 
 html {
@@ -64,9 +63,6 @@ ul, li {
 }
 
 
-
-
-
 .q_split {
   display: block;
   /*overflow: hidden;*/
@@ -83,7 +79,10 @@ ul, li {
 
 section { 
 	text-align: center;
+
+
 }
+
 
 h1 {
 	font-family: 'mn', Arial, sans-serif;
@@ -94,6 +93,19 @@ h1 {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: #fff;
   margin:0px;
+}
+
+header {
+		font-family: 'mn', Arial, sans-serif
+		;
+		font-size: 8em;
+		margin-bottom: 20px;
+		color: black;
+		-webkit-text-fill-color: white; 
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: black;
+		text-align: left !important;
+		margin-left: 5%;
 }
 
 h2 {
@@ -124,9 +136,64 @@ p {
 	transition: all .2s ease;
 }
 
+.viewmore-container .button2 {
+
+	position: absolute;
+	left: 6%;
+
+	padding:8px 30px;
+	border: 1px solid #000 !important;
+	color:#000 !important;
+	font-size:14px;
+	transition: all .2s ease;
+	background-color: white;
+
+}
+
 .button:hover {
 	background:#fff;
 	color:#000;
+}
+
+.list-container {
+	/*display:flex;
+    align-items:left;
+    flex-direction: row;
+    position:relative;*/
+    right:5%;
+  	left:5%;
+  	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+}
+
+.list-container .content {
+	padding:2px;
+    margin:25px;
+}
+
+.list-container .content .imagevent {
+	width: 30%;
+	height: 25%;
+}
+
+.viewmore-container {
+	display: inline-block;
+	text-align: left;
+
+}
+
+.description {
+	text-align: left !important;
+}
+
+ .mydot{
+     background:orange;
+     border-radius: 50%;
+     display: inline-block;
+     height: 10px;
+     margin-left: 4px;
+     margin-right: 4px;
+     width: 10px;
 }
 
 
@@ -216,9 +283,11 @@ section {
 	background-color: #000;
 }
 
-section {
-
+.section2 {
+	position:relative;
+	background-color: #fff !important;
 }
+
 
 .slide {
 	overflow:hidden;
@@ -242,19 +311,25 @@ section {
 }
 
 .section .section_content {
-	position: absolute;
+	/*position: absolute;
 	top:0;
-	left:0;
+	left:0;*/
 	width:100%;
 	height:100%;
 	display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1280px;
+  margin:0 auto !important;
+
+
 }
 
 .section .section_content p {
 	max-width: 295px;
 	margin:40px auto;
 }
+
+
 
 
