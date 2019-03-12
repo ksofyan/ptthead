@@ -1,0 +1,260 @@
+
+@font-face{
+    font-family:mn;
+    src:url("../fonts/maison/MaisonNeue-Light.woff") format('woff');
+    font-style:normal;
+    font-weight:200
+}
+@font-face{
+    font-family:mn;
+    src:url("../fonts/maison/MaisonNeue-Book.woff") format('woff');
+    font-style:normal;
+    font-weight:300
+}
+@font-face{
+    font-family:mn;
+    src:url("../fonts/maison/MaisonNeue-Medium.woff") format('woff');
+    font-style:normal;
+    font-weight:400
+}
+@font-face{
+    font-family:mn;
+    src:url("../fonts/maison/MaisonNeue-Demi.woff") format('woff');
+    font-style:normal;
+    font-weight:500
+}
+@font-face{
+    font-family:mn;
+    src:url("../fonts/maison/MaisonNeue-Bold.woff") format('woff');
+    font-style:normal;
+    font-weight:700
+}
+
+
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+	margin: 0;
+	padding: 0;
+	
+	
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: #fff;
+	background-color: #556677;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+
+
+
+
+.q_split {
+  display: block;
+  /*overflow: hidden;*/
+  /*overflow-y:hidden;*/
+  /*overflow-x:visible;*/
+}
+.q_split_wrap {
+  display: block;
+}
+
+
+/* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section { 
+	text-align: center;
+}
+
+h1 {
+	font-family: 'mn', Arial, sans-serif;
+	font-size: 8em;
+	margin-bottom: 20px;
+	color: black;
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #fff;
+  margin:0px;
+}
+
+h2 {
+	text-transform: lowercase;
+	font-size: 4em;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-weight: 300;
+	font-size: 2.8em;
+}
+
+p {
+	font-size:14px;
+	line-height:1.8;
+	font-weight:400;
+	letter-spacing: 1px;
+}
+
+.button {
+	display: inline-block;
+	text-align: center;
+	padding:8px 30px;
+	border: 1px solid #fff;
+	color:#fff;
+	font-size:14px;
+	transition: all .2s ease;
+}
+
+.button:hover {
+	background:#fff;
+	color:#000;
+}
+
+
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+	background: white;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+	width: 16px;
+	height: 16px;
+	margin: -8px 0 0 -8px;
+	background: transparent;
+	box-sizing: border-box;
+	border: 1px solid #24221F;
+}
+
+.fp-controlArrow {
+	
+  height: 100%;
+  margin-top: 0;
+  top: 0;
+  background-image: none;
+  border:none;
+  cursor:none;
+}
+
+.fp-controlArrow.fp-prev {
+	left:0;
+	width: 40%;
+}
+.fp-controlArrow.fp-next {
+	right:0;
+	width: 40%;
+}
+
+
+.arrow-cursor {
+	width: 80px;
+  height: 110px;
+  position: fixed;
+  z-index: 10000000;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  
+
+
+}
+
+.arrow-cursor.hover {
+	opacity:1;
+}
+
+.arrow-cursor .arrow-cursor__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-cursor .arrow-cursor__icon .arrow-cursor__path {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+}
+
+
+/* COMPONENT STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+section {
+	position: relative;
+	background-color: #000;
+}
+
+section {
+
+}
+
+.slide {
+	overflow:hidden;
+}
+
+.section .background {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  opacity:.8;
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+  transform-origin: center center;
+}
+
+.section .section_content {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section .section_content p {
+	max-width: 295px;
+	margin:40px auto;
+}
+
+
