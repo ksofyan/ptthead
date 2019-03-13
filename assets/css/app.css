@@ -37,6 +37,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	
 }
 
@@ -79,6 +80,8 @@ ul, li {
 
 section { 
 	text-align: center;
+	/*max-width: 1280px;
+	margin: 0 auto;*/
 
 
 }
@@ -96,16 +99,13 @@ h1 {
 }
 
 header {
-		font-family: 'mn', Arial, sans-serif
-		;
-		font-size: 8em;
+		font-family: 'mn', Arial, sans-serif;
+		font-size: 4em;
 		margin-bottom: 20px;
 		color: black;
 		-webkit-text-fill-color: white; 
 		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color: black;
-		text-align: left !important;
-		margin-left: 5%;
 }
 
 h2 {
@@ -117,6 +117,7 @@ h2 {
 h3 {
 	font-weight: 300;
 	font-size: 2.8em;
+	font-family:'Helvetica Neue';
 }
 
 p {
@@ -138,8 +139,7 @@ p {
 
 .viewmore-container .button2 {
 
-	position: absolute;
-	left: 6%;
+	position: relative;
 
 	padding:8px 30px;
 	border: 1px solid #000 !important;
@@ -148,6 +148,8 @@ p {
 	transition: all .2s ease;
 	background-color: white;
 
+	
+
 }
 
 .button:hover {
@@ -155,32 +157,6 @@ p {
 	color:#000;
 }
 
-.list-container {
-	/*display:flex;
-    align-items:left;
-    flex-direction: row;
-    position:relative;*/
-    right:5%;
-  	left:5%;
-  	display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;    
-}
-
-.list-container .content {
-	padding:2px;
-    margin:25px;
-}
-
-.list-container .content .imagevent {
-	width: 30%;
-	height: 25%;
-}
-
-.viewmore-container {
-	display: inline-block;
-	text-align: left;
-
-}
 
 .description {
 	text-align: left !important;
@@ -195,6 +171,49 @@ p {
      margin-right: 4px;
      width: 10px;
 }
+/* NAV BAR STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding:84px;
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index: 9;
+	/*max-width: 1280px;
+	margin: 0 auto;*/
+	/*mix-blend-mode: difference;*/
+
+}
+
+
+.menu-pages{
+	display: flex;
+
+}
+
+.menu-pages li {
+	padding: 0 20px;
+	font-size: 1.5em;
+	
+
+}
+
+.menu-pages a, #idn, #eng{
+	color: rgba(255,255,255,0.4);
+}
+
+.menu-pages a:hover {
+	color:black;
+}
+
+#idn, #eng :hover {
+	color:black;
+}
+
 
 
 /* SLIDENAV STYLES - fullPage.js 
@@ -311,15 +330,15 @@ section {
 }
 
 .section .section_content {
-	/*position: absolute;
+	position: absolute;
 	top:0;
-	left:0;*/
+	left:0;
 	width:100%;
 	height:100%;
 	display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   margin:0 auto !important;
 
 
@@ -332,4 +351,87 @@ section {
 
 
 
+/* SECTON WHITE BACKGROUND STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.section .container {
+	height: 100%;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr) ;
+	grid-template-rows: 11.2em auto 9.2em;
+	padding: 16.6em 6.2em 15.6em;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.titlewrap {
+
+	grid-column: 1/-1;
+	display: flex; 
+	align-items: flex-start;
+	padding-left:2%;
+
+}
+
+.list-container {
+	grid-column: 1/-1;
+ 	grid-column-gap: 40px;
+
+ 	display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  	-webkit-box-pack: justify;
+  	-webkit-justify-content: space-between;
+  	-ms-flex-pack: justify;
+  	justify-content: space-between;
+}
+ 
+.viewmore-container{
+	grid-column: 1/-1;
+	display: flex; 
+	align-items: flex-end;
+	padding-left: 3%;
+	
+}
+
+.list-container .imgcontainer .imagevent {
+	  width: 90%;
+      height: auto;
+      object-fit: cover;
+
+}
+
+.description {
+	padding-left:5%;
+}
+
+
+.description, .description .subtitle{
+	margin-top: 3%;
+}
+
+.description .subtitle{
+	font-size: bold;
+
+}
+
+.description .detail {
+	margin-top:5%;
+	margin-bottom:5%;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.white {
+	background: white;
+}
+
+.description .title, .description .subtitle, .description .detail  {
+	color: black;
+	font-family: 'Helvetica Neue';
+}
 
