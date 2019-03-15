@@ -63,20 +63,28 @@
 		</svg>
 	</div>
 
-  <div class="navbar"> 
+  <div id="navbar" class="navbar"> 
     <nav>
       <a class="logopot" href="#">
-        <img src='assets/img/home/LogoWHITE.png' class="imglogo" />
+        <img src='assets/img/global/logo_white.png' class="imglogo light" />
+        <img src='assets/img/global/logo_black.png' class="imglogo dark" />
       </a>
       <ul class="menu-pages">
-          <li><a href="#">EXPERIENCES</a></li>
+          <li><a href="#" class="active">EXPERIENCES</a></li>
           <li><a href="#">STAY</a></li>
           <li><a href="#">EAT & DRINK</a></li>
           <li><a href="#">SHOP</a></li>
-          <li><a href="#">JOURNAL</a></li>
-          <li><a href="#" class="search">
-            <img src='assets/img/home/Search White.svg' /> SEARCH </a></li>
-          <li><a href="#"><span id="idn" href="#">ID</span> | <span id="eng" href="#">EN</span></a></li>
+          <li><a href="#journal">JOURNAL</a></li>
+          <li class="search">
+            <svg viewBox="0 0 12 18">
+              <path d="M11.8962076,13.3880266 L8.97937458,10.4718404 C9.76180971,9.57250554 10.2355289,8.39911308 10.2355289,7.11662971 C10.2355289,4.29356984 7.93878909,2 5.11776447,2 C2.29407851,2 0,4.2962306 0,7.11662971 C0,9.93702882 2.29673985,12.2332594 5.11776447,12.2332594 C6.40053227,12.2332594 7.57418496,11.7596452 8.47371923,10.9773836 L11.3905522,13.8935698 C11.4597472,13.9627494 11.5528942,14 11.6433799,14 C11.7338656,14 11.8270126,13.9654102 11.8962076,13.8935698 C12.0345975,13.7552106 12.0345975,13.5263858 11.8962076,13.3880266 Z M0.71590153,7.11662971 C0.71590153,4.69002217 2.69061876,2.71840355 5.11510313,2.71840355 C7.54224884,2.71840355 9.51430472,4.69268293 9.51430472,7.11662971 C9.51430472,9.5405765 7.54224884,11.5175166 5.11510313,11.5175166 C2.69061876,11.5175166 0.71590153,9.54323725 0.71590153,7.11662971 Z"></path>
+            </svg>
+
+
+            <!--<img src='assets/img/home/search.svg' /> -->
+            <a href="#">SEARCH </a>
+          </li>
+          <li><a href="#">ID</a> | <a href="#" class="active">EN</a></li>
       </ul>
        <div class="booknow"><a href="#" class="button">BOOK NOW</a></div>
     </nav>
@@ -85,12 +93,6 @@
 	<div id="fullpage">
 
     <!-- Nav Banner -->
-
-
-
- 
-
-
 
 
 		<!-- Home -->
@@ -306,7 +308,7 @@
 		      		<span class="q_split"><span class="q_split_wrap rev_item">Katamama</span></span>
 		      		<!-- <span class="q_split"><span class="q_split_wrap rev_item">Center of Wellness</span></span> -->
 		      	</h1>
-		      	<h3 class="rev_item">A Boutique Hotel Made by Artisan</h3>
+		      	<h3 class="rev_item subHeading">A Boutique Hotel Made by Artisan</h3>
                 <a href="#" class="button rev_item">Explore</a>
 		      </div>
 	      </div>
@@ -318,7 +320,7 @@
 		      	<h1>
 		      		<span class="q_split"><span class="q_split_wrap rev_item">Beach House</span></span>
 		      	</h1>
-		      	<h3 class="rev_item">Center of Creativity</h3>
+		      	<h3 class="rev_item subHeading">Center of Creativity</h3>
 		      	<a href="#" class="button rev_item">Explore</a>
 		      </div>
 	      </div>
@@ -513,33 +515,33 @@
 
     <!-- Journal -->
 
-    <section class="section">
-
-    <!--   <div class="background" style="background-color: white;"></div> -->
+    <section id="journal" class="section white">
       <div class="section_content">
-        <div class="wrap">
-          <h1>
-            <span class="q_split"><span class="q_split_wrap rev_item">Journal</span></span>
-          </h1>
-          <p class="rev_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum sagittis tellus id accumsan.</p>
-          <a href="#" class="button rev_item">Explore</a>
-        </div>
-
         <div class="wrap-2">
-          <div class="box1" style="background-image: url('assets/img/home/slide5.jpg')">
-            <p>Art Culture</p>
-            <p><b>The Dying Art of Craftmanship</b><br>Reviewing Indonesian Craft for the future</p>
-            <p><icon class="timer-icon"></icon> 14 min read</p>
-            <p><b>12 Aug 2018</b><br>Posted by Potato Head</p>
-            <a href="#" class="button rev_item">Read More</a>
-          </div>
-          <div class="box-2">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-          </div>
-          <div class="box1" style="background-image: url('')"></div>
+            <div class="box1">
+              <h1 class="black">
+                <span class="q_split"><span class="q_split_wrap rev_item">Journal</span></span>
+              </h1>
+              <p class="rev_item black-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum sagittis tellus id accumsan.</p>
+              <a href="#" class="rev_item button3">Explore</a>
+            </div>
+
+       
+              <div class="box2" style="background-image: url('assets/img/home/slide5.jpg')">
+                <p>Art Culture</p>
+                <p><b>The Dying Art of Craftmanship</b><br>Reviewing Indonesian Craft for the future</p>
+                <p><icon class="timer-icon"></icon> 14 min read</p>
+                <p><b>12 Aug 2018</b><br>Posted by Potato Head</p>
+                <a href="#" class="button rev_item">Read More</a>
+              </div>
+
+              <div class="box3">
+                  <img  class="imgjournal" src='assets/img/home/slide4-5.jpg'>
+                  <img  class="imgjournal" src='assets/img/home/slide4-5.jpg'>
+                  <img  class="imgjournal" src='assets/img/home/slide4-5.jpg'>
+                  <img  class="imgjournal" src='assets/img/home/slide4-5.jpg'>
+              </div>
+              <div class="box4" style="background-color: grey"> h</div>
         </div>
       </div>
 
@@ -549,7 +551,6 @@
     <!-- Footer -->
 
     <section class="section">
-      <!-- <div class="background" style="background-color: white;"></div> -->
       <div class="pictureRow">
                 <section >
                     <div class="content">

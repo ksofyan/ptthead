@@ -11,6 +11,8 @@ new fullpage('#fullpage', {
 
 	onLeave: function(index, nextIndex, direction) {
 
+		navBarChange();
+
 		var bgPrev = index.item.querySelectorAll('.background');
 		var bgNext = nextIndex.item.querySelectorAll('.background');
 		var itemPrev = index.item.querySelectorAll('.rev_item');
@@ -75,67 +77,85 @@ new fullpage('#fullpage', {
 			);
 		}
 
-		
+
 
   },
-  /*
-  onSlideLeave: function(section, origin, destination, direction) {
+  
+  // onSlideLeave: function(section, origin, destination, direction) {
 
-		var bgPrev = origin.item.querySelectorAll('.background');
-		var bgNext = destination.item.querySelectorAll('.background');
-		var itemPrev = origin.item.querySelectorAll('.rev_item');
-		var itemNext = destination.item.querySelectorAll('.rev_item');
+  // 		navBarChange();
+
+		// var bgPrev = origin.item.querySelectorAll('.background');
+		// var bgNext = destination.item.querySelectorAll('.background');
+		// var itemPrev = origin.item.querySelectorAll('.rev_item');
+		// var itemNext = destination.item.querySelectorAll('.rev_item');
 
 		
 
-		TweenMax.staggerFromTo(
-		  itemNext,1, 
-		  {alpha:0, y:30},
-		  {alpha:1, y:0, ease:Expo.easeOut, delay:.65},0.15
-		);
+		// TweenMax.staggerFromTo(
+		//   itemNext,1, 
+		//   {alpha:0, y:30},
+		//   {alpha:1, y:0, ease:Expo.easeOut, delay:.65},0.15
+		// );
 		
 
-		if (origin.index < destination.index) {
-			TweenMax.set(bgPrev,{alpha:.2, xPercent:-50});
+		// if (origin.index < destination.index) {
+		// 	TweenMax.set(bgPrev,{alpha:.2, xPercent:-50});
 
 
-			TweenMax.fromTo(
-	      bgPrev,1, 
-	      {alpha:.8, xPercent:0},
-	      {alpha:.2, xPercent:40, ease:Expo.easeInOut}
-	    );
+		// 	TweenMax.fromTo(
+	 //      bgPrev,1, 
+	 //      {alpha:.8, xPercent:0},
+	 //      {alpha:.2, xPercent:40, ease:Expo.easeInOut}
+	 //    );
 
-			TweenMax.fromTo(
-	      bgNext,1, 
-	      {alpha:.2, xPercent:-40},
-	      {alpha:.8, xPercent:0, ease:Expo.easeInOut}
-	    );
-		}
+		// 	TweenMax.fromTo(
+	 //      bgNext,1, 
+	 //      {alpha:.2, xPercent:-40},
+	 //      {alpha:.8, xPercent:0, ease:Expo.easeInOut}
+	 //    );
+		// }
 
-		else {
-			TweenMax.set(bgNext,{alpha:.2, xPercent:50});
+		// else {
+		// 	TweenMax.set(bgNext,{alpha:.2, xPercent:50});
 
-			TweenMax.fromTo(
-	      bgPrev,1, 
-	      {alpha:.8, xPercent:0},
-	      {alpha:.2, xPercent:-40, ease:Expo.easeInOut}
-	    );
+		// 	TweenMax.fromTo(
+	 //      bgPrev,1, 
+	 //      {alpha:.8, xPercent:0},
+	 //      {alpha:.2, xPercent:-40, ease:Expo.easeInOut}
+	 //    );
 
-			TweenMax.fromTo(
-	      bgNext,1, 
-	      {alpha:.2, xPercent:40},
-	      {alpha:.8, xPercent:0, ease:Expo.easeInOut}
-	    );
-		}
+		// 	TweenMax.fromTo(
+	 //      bgNext,1, 
+	 //      {alpha:.2, xPercent:40},
+	 //      {alpha:.8, xPercent:0, ease:Expo.easeInOut}
+	 //    );
+		// }
 
-  },
-	*/
+  // },
+	
 
 });
 
 
 
+function navBarChange() {
 
+
+	var navBar = document.getElementById('navbar');
+	var cont = document.getElementById('fullpage');
+	var sec = cont.querySelector('.section.active');
+
+	setTimeout(function(){ 
+		if (sec.classList.contains('white')) {
+			navBar.classList.remove('white');
+	    } else {
+	    	navBar.classList.add('white');
+	    }
+		
+	}, 500);
+
+}
 
 
 
