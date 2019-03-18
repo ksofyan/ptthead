@@ -69,7 +69,11 @@
         <img src='assets/img/global/logo_white.png' class="imglogo light" />
         <img src='assets/img/global/logo_black.png' class="imglogo dark" />
       </a>
-      <ul class="menu-pages">
+        <div id="nav-toggle">
+           <a href="#menu" class="box-shadow-menu"></a>
+           <i class="search-icon"> <img src="assets/img/home/searchwhite.svg"> </i>
+        </div>
+      <ul class="menu-pages" id="js-menu">
           <li><a href="#experience" class="active">EXPERIENCES</a></li>
           <li><a href="#stay">STAY</a></li>
           <li><a href="#eat&drink">EAT & DRINK</a></li>
@@ -88,6 +92,7 @@
       </ul>
        <div class="booknow"><a href="#footer" class="button">BOOK NOW</a></div> <!--  orginal origin page is not footer. please change -->
     </nav>
+
   </div>
 
 	<div id="fullpage">
@@ -99,14 +104,18 @@
 
     <section id="home" class="section sect">
     	<div class="background" style="background-image:url('assets/img/home/slide1.jpg')"></div>
-    	<div class="section_content">
-    		<div class="wrap">
+    	<div id="res-content" class="section_content">
+    		<div class="wrap" style='width:70vh; position: relative;'>
 		    	<h1>
 		    		<span class="q_split"><span class="q_split_wrap rev_item">Welcome to the</span></span>
 						<span class="q_split"><span class="q_split_wrap rev_item">Creative Village</span></span>
 		    	</h1>
 		    	<p class="rev_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum sagittis tellus id accumsan.</p>
 		    	<a href="#" class="button rev_item">Explore</a>
+
+          <div class="mobile-booknow">
+              <a href="#" class="btn2"> BOOK NOW </a>
+          </div>
 		    </div>
 	    </div>
     </section>
@@ -312,18 +321,24 @@
 		      	</h1>
 		      	<h3 class="rev_item subHeading">A Boutique Hotel Made by Artisan</h3>
                 <a href="#" class="button rev_item">Explore</a>
+                 <div class="mobile-booknow">
+                  <a href="#" class="btn2"> BOOK NOW </a>
+                </div>
 		      </div>
 	      </div>
       </section>
       <section class="slide sect">
       	<div class="background" style="background-image:url('assets/img/home/slide3-1.jpg')"></div>
-      	<div class="section_content">
-      		<div class="wrap">
+      	<div  class="section_content">
+      		<div class="wrap" >
 		      	<h1>
 		      		<span class="q_split"><span class="q_split_wrap rev_item">Beach House</span></span>
 		      	</h1>
 		      	<h3 class="rev_item subHeading">Center of Creativity</h3>
 		      	<a href="#" class="button rev_item">Explore</a>
+                 <div class="mobile-booknow">
+                    <a href="#" class="btn2"> BOOK NOW </a>
+                </div>
 		      </div>
 	      </div>
       </section>
@@ -505,6 +520,7 @@
 
 
 	<script type="text/javascript" src="assets/js/app.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/navtoggle.js"></script> -->
 
 </body>
 
