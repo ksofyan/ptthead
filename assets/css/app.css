@@ -81,7 +81,7 @@ ul, li {
 section { 
 	text-align: center;
 	/*max-width: 1280px;
-	margin: 0 auto;*/c
+	margin: 0 auto;*/
 }
 
 
@@ -398,13 +398,6 @@ section {
  @media screen and (max-width: 320px) {
   	#res-content {height:131%;}
   }
-/*  @media screen and (max-width: 720px) {
-  	#res-content1{height:110%;}
-  }
- @media screen and (max-width: 320px) {
-  	#res-content1 {height:110%;}
-  }
-*/
 
 .section .section_content p {
 	max-width: 295px;
@@ -431,11 +424,7 @@ section {
  	.mobile-booknow {display:flex; top:3em;} 
  	.btn2{font-size:1.27em; padding: 1.5em 9.7em;}
  }
-/* @media screen and (max-width: 720px){
- 	.mobile-booknow1 {top:19.5em;} 
- }
- @media screen and (max-width:320px) {
- 	.mobile-booknow1 { top:19.5em;} */
+
 
 /* SECTON WHITE BACKGROUND STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -560,11 +549,21 @@ section {
 	padding: 18.6em 6.2em 15.6em;
 }
 
+@media screen and (max-width: 720px) {
+	.footer-wrap {display: flex; flex-direction: column; padding:3em .1em 0} 
+}
+
 .pictureRow {
 	grid-column: 1/-1;
 	display: flex; 
 	max-width: 1280px; 
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 720px) {
+	.pictureRow {display: none;}
+}@media screen and (max-width: 320px) {
+	.pictureRow {display: none;}
 }
 
 .imgfooter { 
@@ -574,13 +573,22 @@ section {
     object-fit: cover; 
  }
 
-.contact-info {padding-left: 15px;}
+ @media screen and (max-width: 720px) {.contact-info .wraplink{display: none;}}
+
+.contact-info {padding-left: 15px;} 
+@media screen and (max-width: 720px) {.contact-info{padding-left: 0;}}
 .contact-info h2 {
 	font-size: 5em; 
 	text-transform: none;
 }
+@media screen and (max-width: 720px) {.contact-info p
+	{text-align: center;font-size: 1.2em;}
+}
+@media screen and (max-width: 320px) {.contact-info p{text-align: center;font-size: 1.2em;}}
+@media screen and (max-width: 720px) { .contact-info h2 {font-size: 3em; text-align: center;}}
 .subscribe {padding-left: 90px;}
 .contact-info , .subscribe{padding-top:40px;}
+@media screen and (max-width: 720px) {.subscribe {padding-top: 20px; padding-left: 0; margin-top: 0;}}
 .footer-wrap .contact-info, .contact-info .pages-link a,  .footer-wrap .subscribe {
 	color: #000;
 	text-align: left; 
@@ -588,10 +596,15 @@ section {
 }
 
 .contact-info .social-icons {display: flex;}
+
+@media screen and (max-width: 720px){
+	.contact-info .social-icons{padding-left: 20px;padding-top: 30px; padding-bottom: 30px;  justify-content: center;}}
 .social-icons {flex-wrap: wrap; flex-direction: row; padding: 50px 0; }
 .social-icons img{padding: 0 20px;}
 .contact-info .social-icons :nth-child(1){padding-left: 0;}
 .contact-info .pages-link{display: flex; margin-top: 50px;}
+@media screen and (max-width: 720px) {.contact-info .pages-link{display: none !important;}}
+
 .wraplink {flex-wrap: wrap;
 }
 .contact-info .pages-link a {
@@ -609,6 +622,10 @@ section {
 .subscribe p {padding-right: 30%;  margin-bottom: 10%;}
 .subscribe form { max-width:70%; }
 .subscribe small { font-size: 11px; padding-top: 0 20px; }
+@media screen and (max-width: 720px) {
+	.subscribe h3 { font-size: 2em;font-weight: 500; text-align: center; }
+	.subscribe p {font-size: 1.2em; text-align: center; padding-right: 5%;}
+}
 .subscribe .input {
 	position: relative;
 	z-index: 2;
@@ -617,12 +634,16 @@ section {
 	flex-flow: row-wrap;
 	margin-bottom: 20%; 
 }
+
+@media screen and (max-width: 720px){.subscribe .input {margin-left: 10%;}}
+
 .subscribe .input  .form-control {
 	height: 38px;
 	border-radius:0;
 	width: 70%;
 	font-size: 14px;
 	padding-left: 5%;
+	border: 1px solid black;
 }
 .subscribe .input .btn {
 	height: 38px; 
