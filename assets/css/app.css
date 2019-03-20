@@ -125,7 +125,8 @@ p {
 	letter-spacing: 1px;
 }
 
-@media screen and (max-width: 768px) {h1 {font-size: 4.5em;} p{padding: 0 2.5em;}}
+@media screen and (max-width: 812px) {h1 {font-size: 4.5em;} p{padding: 0 2.5em;}}
+
 @media screen and (max-width: 320px){h1 {font-size: 4em;}p {font-size: 13px; padding: 0 2.5em;}}
 .subHeading { 
 margin: 30px; 
@@ -206,9 +207,10 @@ nav {
 	top:0;
 	width: 100%;
 	z-index: 9;}
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 812px) {
 	nav {padding:20px;}
 }
+
 
 .navbar .menu-pages{display: flex;}
 .navbar .menu-pages li {
@@ -260,7 +262,7 @@ nav {
 .search-icon img {position: relative; display: block;    padding-left: 3.5em; top: -1.5em;}
 
 #nav-toggle { display: none; cursor: pointer; }
-@media screen and  (max-width: 768px) {
+@media screen and  (max-width: 812px) {
 	#nav-toggle {display:inline;}
 	#js-menu{display: none;}
 	.booknow{display: none;}
@@ -413,6 +415,11 @@ section {
 	position: absolute; 
 	bottom: 0;
  }
+
+ @media screen and (min-width: 667px){
+ 	#booknow { margin-left: -20%; }}
+ 	 @media screen and (min-width: 667px){
+ 	#booknow { margin-left: -16%; }}
  .btn2 { 
  color: #000;
  font-size: 1.5em;
@@ -445,8 +452,8 @@ section {
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {.section .container{padding:9.6em .2em 15.6em;}}
-
+@media screen and (max-width: 720px) {.section .container{padding:9.6em .2em 15.6em;}}
+@media screen and (max-width: 768px) {.section .container{padding:15.6em 7em 15.6em;;}}
 .wrap-2 {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -497,7 +504,7 @@ section {
 
 	.list-container{ 
 
-		  scroll-snap-align: center;
+		    scroll-snap-align: center;
   			padding: calc(var(--gutter) / 2 * 1.5);
   			display: flex;
   			flex-direction: row;
@@ -707,3 +714,54 @@ font-size:
 
 hr { width: 90%; margin-left: 5%; visibility: hidden;  color: rgba(0,0,0,0.4); }
 @media screen and (max-width: 768px) {hr{visibility: visible;}}
+
+ /* CONTACT FORM - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.form{ 
+padding-left: 10%; }
+.form-control {
+	border-radius: 0;
+	border-color: #000;
+   	border-width: 0 0 1px 0;
+   	border-style: none none solid none;
+   	box-shadow: none;
+
+   	color: rgba(0,0,0,0.4);	
+   	font-family: "Helvetica Neue";	
+   	font-size: 18px;
+   	padding: 40px 0 20px;
+   	width: 65%;
+}
+.form-control:focus {
+	outline: none;
+}
+.js-hide-label {
+	opacity: 0; 	
+}
+.js-unhighlight-label {
+	color: #999 
+}
+.btn-start-order {
+	position: relative;
+	height: 28px;
+	width: auto;
+	padding:5px 30px;
+	border: 1px solid #000 !important;
+	color:#000 !important;
+	font-size:14px;
+	transition: all .2s ease;
+	background-color: white;
+	top: 40px;
+    left: 44%;
+
+}
+
+@media screen and (max-width: 768px) {
+	#contact-wrap { padding: 10em 0; }
+	.form-control {padding: 20px 0 20px; width: 95%; font-size: 13px;}
+	#contact h2, #contact p, #contact .social-icons {text-align: left; justify-content: left; padding-left: 5%;}
+	.form{padding-left: 5%;}
+	.btn-start-order { top: 30px; left: 60%;}
+}
+
+@media screen and (max-width: 320px) {.form-control{padding: 10px 0 10px; }}
