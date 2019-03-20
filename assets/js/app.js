@@ -17,6 +17,11 @@ new fullpage('#fullpage', {
 		var bgNext = nextIndex.item.querySelectorAll('.background');
 		var itemPrev = index.item.querySelectorAll('.rev_item');
 		var itemNext = nextIndex.item.querySelectorAll('.rev_item');
+
+
+
+
+
 		
 
 		// ----- Next Slide ----- //
@@ -26,26 +31,28 @@ new fullpage('#fullpage', {
 			// current slide animation
 
 			TweenMax.fromTo(
-	      bgPrev,1, 
-	      {alpha:.8, scale:1.1, yPercent:0},
-	      {alpha:.2, scale:1, yPercent:40, ease:Power2.easeInOut}
-	    );
+		      bgPrev,1, 
+		      {alpha:.8, scale:1.1, yPercent:0},
+		      {alpha:.2, scale:1, yPercent:40, ease:Power2.easeInOut}
+		    );
 
-	    // new slide animation
+	    	// new slide animation
 
 			TweenMax.fromTo(
-	      bgNext,1, 
-	      {alpha:.2, scale:1.2, yPercent:-40},
-	      {alpha:.8, scale:1.1, yPercent:0, ease:Power1.easeInOut}
-	    );
+		      bgNext,1, 
+		      {alpha:.2, scale:1.2, yPercent:-40},
+		      {alpha:.8, scale:1.1, yPercent:0, ease:Power1.easeInOut}
+		    );
 
-	    // new slide texts animation
+	    	// new slide texts animation
 
-	    TweenMax.staggerFromTo(
+	    	TweenMax.staggerFromTo(
 			  itemNext,1, 
 			  {alpha:0, y:20},
 			  {alpha:1, y:0, ease:Power2.easeOut, delay:.65},0.15
 			);
+
+
 		}
 
 		// ----- Prev Slide ----- //
@@ -55,27 +62,56 @@ new fullpage('#fullpage', {
 			// current slide animation
 
 			TweenMax.fromTo(
-	      bgPrev,1, 
-	      {alpha:.8, scale:1.1, yPercent:0},
-	      {alpha:.2, scale:1, yPercent:-40, ease:Power2.easeInOut}
-	    );
+		      bgPrev,1, 
+		      {alpha:.8, scale:1.1, yPercent:0},
+		      {alpha:.2, scale:1, yPercent:-40, ease:Power2.easeInOut}
+		    );
 
-	    // new slide animation
+	    	// new slide animation
 
 			TweenMax.fromTo(
-	      bgNext,1, 
-	      {alpha:.2, scale:1.2, yPercent:40},
-	      {alpha:.8, scale:1.1, yPercent:0, ease:Power1.easeInOut}
-	    );
+		      bgNext,1, 
+		      {alpha:.2, scale:1.2, yPercent:40},
+		      {alpha:.8, scale:1.1, yPercent:0, ease:Power1.easeInOut}
+		    );
 
-	    // new slide texts animation
+	    	// new slide texts animation
 
-	    TweenMax.staggerFromTo(
+	    	TweenMax.staggerFromTo(
 			  itemNext,1, 
 			  {alpha:0, y:-20},
 			  {alpha:1, y:0, ease:Power2.easeOut, delay:.65},0.15
 			);
+
 		}
+
+		var threeBoxes = nextIndex.item.querySelectorAll('.slide.three-box');
+    	var threeBox = nextIndex.item.classList.contains('three-box');
+
+    	if (threeBoxes && threeBoxes.length > 0 || threeBox) {
+    		if (threeBox) {
+    			var items = nextIndex.item.querySelectorAll('.event-info');
+    			animateBoxes(items)
+	    		
+    		} else {
+    			for (var i = threeBoxes.length - 1; i >= 0; i--) {
+				    var threeBox = threeBoxes[i]; 
+	    			var items = threeBox.querySelectorAll('.event-info');
+	    			animateBoxes(items)
+				  };
+    		}
+
+    		function animateBoxes(items) {
+    			TweenMax.staggerFromTo(
+				  items,.5, 
+				  {alpha:0, y:100},
+				  {alpha:1, y:0, ease:Power2.easeOut, delay:.35},0.1
+				);
+    		}
+    	}
+
+
+
 
 
 
@@ -90,6 +126,10 @@ new fullpage('#fullpage', {
 	
 
 });
+
+
+
+// ---------- Navbar Colour Change ---------- //
 
 
 
