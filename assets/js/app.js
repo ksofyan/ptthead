@@ -242,8 +242,27 @@ function togglePopupSearch(value) {
 }
 
 
+function togglePopupNavbar(value) {
+	var navpop = document.querySelector('.popup-navbar');
 
+	if(!navpop) return
+		if(value) {
+			navpop.classList.add('active')
+		} else {
+			navpop.classList.remove('active');
+		}
+}
 
+function togglePopupBooknow(value) {
+	var bookPop = document.querySelector('.popup-booknow');
+
+	if(!bookPop) return
+		if(value) {
+			bookPop.classList.add('active')
+		} else {
+			bookPop.classList.remove('active');
+		}
+}
 
 
 

@@ -70,8 +70,12 @@
         <img src='assets/img/global/logo_black.png' class="imglogo dark" />
       </a>
         <div id="nav-toggle">
+          <div class="mob-nav" onclick="togglePopupNavbar(true)">
            <a href="#menu" class="box-shadow-menu"></a>
-           <i class="search-icon"> <img src="assets/img/home/searchwhite.svg"> </i>
+          </div>
+          <div class="mob-search"
+           <i class="search-icon" onclick="togglePopupSearch(true)"> <img src="assets/img/home/searchwhite.svg" style="margin: -13px 0.1px;width: 15px;"> </i>
+          </div>
         </div>
       <ul class="menu-pages" id="js-menu">
           <li><a href="#experience" class="active">EXPERIENCES</a></li>
@@ -90,8 +94,29 @@
           </li>
           <li><a href="#">ID</a> | <a href="#" class="active">EN</a></li>
       </ul>
-       <div class="booknow"><a href="#footer" class="button">BOOK NOW</a></div> <!--  orginal origin page is not footer. please change -->
+       <div class="booknow" onclick="togglePopupBooknow(true)" ><a class="button">BOOK NOW</a></div> <!--  orginal origin page is not footer. please change -->
     </nav>
+
+  <div class="popup-navbar">
+      <div class="mob-header">
+        <div class="close" onclick="togglePopupNavbar(false)" style="color:black"> 
+          <span > <p style="font-size: 2.5em"> x </p> </span><span ><p style="margin:1.5em 1em; text-transform: uppercase; font-size: 1.1em">Close</p></span>
+        </div>
+      </div>
+
+      <ul class="mob-menu" style="color: black">
+          <li><a href="#experience">EXPERIENCES</a></li>
+          <li><a href="#stay">STAY</a></li>
+          <li><a href="#eat&drink" class="active">EAT & DRINK</a></li>
+          <li><a href="#shop">SHOP</a></li>
+          <li><a href="#journal">JOURNAL</a></li>
+      </ul>
+      
+      <div class="mob-lang" style="color: black">
+        <a href="#">ID</a><a> | </a> <a href="#" class="active">EN</a>
+      </div>
+
+    </div>
 
   </div>
 
@@ -447,7 +472,7 @@
 
   <section id="footer" class="section sectx white">
     <div class="footer-wrap" >
-        <div class="pictureRow">
+        <div class="pictureRow"> <!-- semua gambar dibawah dari instagram bukan static. -->
                         <img  class="imgfooter" src='assets/img/home/19.jpg' alt="" />
                         <img  class="imgfooter" src='assets/img/home/18.jpg' alt="" />
                         <img  class="imgfooter" src='assets/img/home/17.jpg' alt="" />        
@@ -504,20 +529,80 @@
   </section>
 
   <div class="popup-container">
-      <div class="close" onclick="togglePopupSearch(false)"> <span > <p style="font-size: 2em"> x </p> </span> <span style="margin:1.2em 1em"><p style="text-transform: uppercase; font-size: 0.625em">Close</p></span>
+    <div class="popup-wrapper">
+           <div class="close" onclick="togglePopupSearch(false)"> <span > <p style="font-size: 2em"> x </p> </span> <span style="margin:1.2em 1em"><p style="text-transform: uppercase; font-size: 0.625em">Close</p></span>
+          </div>
+      <div class="search-description"> 
+            <input type="text" placeholder="Search for Products, Brands or News" class="search-barpop"> 
+            <i class="icon-search"> <img src="assets/img/home/Search.svg"> </i>
+           </div>
+
+           <hr class="search-page" />
       </div>
-      <div class="search-description"> <input type="text" placeholder="Search for Products, Brands or News" class="search-barpop" style="width: 73%"> <i class="icon-search"> <img src="assets/img/home/Search.svg"> 
-
-      </i>
-       </div>
-
-       <hr class="search-page" />
   
+  </div>
+
+  <div class="section popup-booknow">
+    <div class="popup-wrapper">
+      <div class="booknow-container">
+        <div class="booknow-title" style="color:black">
+          <h2> Stay</h2>
+          <h2> Eat & Drinks</h2>
+          <h2> Meetings </h2>
+        </div>
+        <div class="booking-form">
+          <div class="form-cont">
+                            <form action="" class="form" style="color:black">
+                                <div class="form-content">
+                                    <div class="form-row">
+                                        <label for="first-name" class="form-label">Where you stay?</label>
+                                        <input type="text"  id="first-name" class="form-textbox " required placeholder="Select Accomodation">
+                                        <div class="input-animate"></div>
+                                    </div>
+                                    <div class="splitform">
+                                        <div class="form-row">
+                                            <label for="first-name" class="form-label">Check In</label>
+                                            <input type="text"  id="first-name" class="form-textbox " required placeholder="Start Date">
+                                            <div class="input-animate"></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <label for="last-name" class="form-label">Check Out</label>
+                                            <input type="text"  id="last-name" class="form-textbox " required placeholder=" Start Date">
+                                            <div class="input-animate"></div>
+                                        </div>
+                                    </div>
+                                    <div class="splitform">
+                                        <div class="form-row">
+                                            <label for="first-name" class="form-label">Adults</label>
+                                            <input type="text"  id="first-name" class="form-textbox " required placeholder="2">
+                                            <div class="input-animate"></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <label for="last-name" class="form-label">Children</label>
+                                            <input type="text"  id="last-name" class="form-textbox " required placeholder="0">
+                                            <div class="input-animate"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <!-- <div class="button-wrapper">
+                                        <button id= "buttonform" class="primary">CHECK ABILITY</button>
+                                        </div> -->
+                                    </div>
+                                    <div class="button-wrapper">
+                                        <button id= "buttonform" class="primary">Submit</button>
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 
 	<script type="text/javascript" src="assets/js/app.js"></script>
-  <!-- <script type="text/javascript" src="assets/js/navtoggle.js"></script> -->
+  <script type="text/javascript" src="assets/js/navtoggle.js"></script>
 
 </body>
 

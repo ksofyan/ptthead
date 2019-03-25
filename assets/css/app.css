@@ -263,10 +263,50 @@ nav {
 
 #nav-toggle { display: none; cursor: pointer; }
 @media screen and  (max-width: 812px) {
-	#nav-toggle {display:inline;}
+	#nav-toggle {display:flex; flex-direction: row;}
 	#js-menu{display: none;}
 	.booknow{display: none;}
 }
+
+/* MOBILE NAV BAR STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.popup-navbar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(255,255,255,0.85);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	z-index: 999;
+	display: flex; 
+	flex-direction: column;	
+}
+
+.popup-navbar.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+.popup-navbar .mob-header {padding-top:3%;}
+.popup-navbar .mob-header .close {display: flex; flex-direction: row; margin-right:3%;justify-content: flex-end;}
+.popup-navbar .mob-header .close p {padding:0 !important;}
+.popup-navbar .mob-menu {margin-top: 10%;}
+.popup-navbar .mob-menu a{color: grey; font-size:20px; font-weight: 500; letter-spacing: 0.1em;}
+.popup-navbar .mob-lang {display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    margin-right: 5%;
+    margin-top: 70%;
+	}
+
+.popup-navbar .mob-menu a.active {color:#000;}
+.popup-navbar .mob-lang a.active {color:#000;}
+ .popup-navbar .mob-lang a { color: grey; font-size: 1.2em; font-weight: 500; letter-spacing: 0.15em;}
+
+ .popup-navbar .mob-menu li { margin: 20px; }
 
 /* SLIDENAV STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -729,7 +769,7 @@ padding-left: 10%; }
    	color: rgba(0,0,0,0.4);	
    	font-family: "Helvetica Neue";	
    	font-size: 18px;
-   	padding: 40px 0 20px;
+   	padding: 15px 0 20px;
    	width: 65%;
 }
 .form-control:focus {
@@ -780,36 +820,63 @@ padding-left: 10%; }
 	pointer-events: none;
 	transition: all 0.3s ease;
 	z-index: 999;
+	
 }
 
 .popup-container.active {
 	opacity: 1;
 	pointer-events: auto;
 }
-.popup-container .close { display: flex; flex-direction: row; max-width: 100%; margin:5.5em 19em; color: black;  }
+
+.popup-wrapper {max-width: 1280px;
+margin:0 auto;}
+
+.popup-container .close { display: flex; flex-direction: row; margin:5.5em 17em; color: black;  }
 .popup-container .search-description{ display: flex; flex-direction: row;
-margin: 0 auto; max-width:100%; justify-content: space-around; }
+margin: 0 auto;   }
 .search-description .search-barpop{ 
 	color: rgba(0,0,0,0.4);	font-family: "Helvetica Neue";	font-size: 3.250em;	
-	font-weight: 300; text-transform: none !important;}
-
+	font-weight: 300; text-transform: none !important;
+    width: 70%; margin-left: 13%; padding-bottom: 1%; border:0; background: none;}
+.search-description .search-barpop:focus{ outline: none; }
 hr.search-page { 
 visibility: visible !important;
-width: 73%;
-margin: 0 auto; }
+width: 75%;
+margin: 0 auto;
+max-width: 1280px; }
 
 .icon-search img { width: 2.875em; margin: 0.625em}
 @media screen and (max-width: 768px) { .icon-search img 
 	{ width: 1.5em; margin: 0.15em; } 
-	.search-description h2 { font-size: 1.7em; padding-left: 10px;}
-	.icon-search img {width: 1.8em; margin:0.15em;}
+	.search-description .search-barpop{ font-size: 1.7em; margin-left:8% !important;}
+	.icon-search img {width: 1.8em; margin:1em; margin-left:3.5em;}
 	hr.search-page {width: 90%;}
+	.popup-container .close p {padding: 0;}
+	.popup-container .close {margin:3em 29em;}
 }
 
 
+ /* Book Now Pop up Page - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.popup-booknow {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(255,255,255,0.85);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	z-index: 8;
+	
+}
 
-
+.popup-booknow.active {
+	opacity: 1;
+	pointer-events: auto;
+}
 
 
 
