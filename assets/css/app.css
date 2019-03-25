@@ -765,3 +765,60 @@ padding-left: 10%; }
 }
 
 @media screen and (max-width: 320px) {.form-control{padding: 10px 0 10px; }}
+
+ /* Search Pop up Page - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.popup-container {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(255,255,255,0.85);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	z-index: 999;
+}
+
+.popup-container.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+.popup-container .close { display: flex; flex-direction: row; max-width: 100%; margin:5.5em 19em; color: black;  }
+.popup-container .search-description{ display: flex; flex-direction: row;
+margin: 0 auto; max-width:100%; justify-content: space-around; }
+.search-description .search-barpop{ 
+	color: rgba(0,0,0,0.4);	font-family: "Helvetica Neue";	font-size: 3.250em;	
+	font-weight: 300; text-transform: none !important;}
+
+hr.search-page { 
+visibility: visible !important;
+width: 73%;
+margin: 0 auto; }
+
+.icon-search img { width: 2.875em; margin: 0.625em}
+@media screen and (max-width: 768px) { .icon-search img 
+	{ width: 1.5em; margin: 0.15em; } 
+	.search-description h2 { font-size: 1.7em; padding-left: 10px;}
+	.icon-search img {width: 1.8em; margin:0.15em;}
+	hr.search-page {width: 90%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

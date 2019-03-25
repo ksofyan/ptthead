@@ -111,16 +111,11 @@ new fullpage('#fullpage', {
     	}
 
 
-
-
-
-
   },
   
   onSlideLeave: function(section, origin, destination, direction) {
 
   		navBarChange(destination.item);
-
 
   }
 	
@@ -231,7 +226,20 @@ function qCursor() {
 
 };
 
-qCursor()
+qCursor();
+
+
+function togglePopupSearch(value) {
+	var popup = document.querySelector('.popup-container');	
+
+	if(!popup) return
+
+	if(value) {
+		popup.classList.add('active')
+	} else {
+		popup.classList.remove('active');
+	}
+}
 
 
 
