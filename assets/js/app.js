@@ -255,12 +255,15 @@ function togglePopupNavbar(value) {
 
 function togglePopupBooknow(value) {
 	var bookPop = document.querySelector('.popup-booknow');
+	var navbar = document.querySelector('.navbar')
 
 	if(!bookPop) return
 		if(value) {
 			bookPop.classList.add('active')
+			navbar.classList.add('white')
 		} else {
 			bookPop.classList.remove('active');
+			navbar.classList.remove('white')
 		}
 }
 

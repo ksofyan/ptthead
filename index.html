@@ -63,7 +63,7 @@
 		</svg>
 	</div>
 
-  <div id="navbar" class="navbar"> 
+  <div id="navbar" class="navbar "> 
     <nav>
       <a class="logopot" href="#home">
         <img src='assets/img/global/logo_white.png' class="imglogo light" />
@@ -140,7 +140,7 @@
 		    </div>
 
         <div class="mobile-booknow">
-              <a href="#" class="btn2"> BOOK NOW </a>
+              <a href="#" class="btn2" onclick="togglePopupBooknow(true)"> BOOK NOW </a>
           </div>
 	    </div>
     </section>
@@ -548,45 +548,42 @@
         <div class="booknow-title" style="color:black">
           <h1 class="active"> Stay</h1>
           <h1> Eat & Drinks</h1>
-          <h1> Meetings </h1ç>
+          <h1> Meetings </h1>
         </div>
+         <div class="title-mobile" > <h1>Stay</h1> <span style="margin-left: 35px"><h3> &or; </h3></span></div>
         <div class="booking-form">
           <div class="form-cont">
-            <form action="" class="form" style="color:black; font-size: 20px">
+            <form action="" id="form2" class="form">
                 <div class="form-content">
-                    <div class="form-row">
+                    <div class="form-row" id="first-row">
                         <label for="first-name" class="form-label">Where you stay?</label>
-                        <input type="text"  id="first-name" class="form-textbox " required placeholder="Select Accomodation">
-                        <div class="input-animate"></div>
+                        <input type="text"  id="first-name" class="form-textbox " style= "width: 22.5em;"required placeholder="Select Accomodation">
                     </div>
                     <div class="splitform">
                         <div class="form-row">
                             <label for="first-name" class="form-label">Check In</label>
                             <input type="text"  id="first-name" class="form-textbox " required placeholder="Start Date">
-                            <div class="input-animate"></div>
                         </div>
-                        <div class="form-row">
+                        <div id="secondrow" class="form-row">
                             <label for="last-name" class="form-label">Check Out</label>
                             <input type="text"  id="last-name" class="form-textbox " required placeholder=" Start Date">
-                            <div class="input-animate"></div>
                         </div>
                     </div>
                     <div class="splitform">
                         <div class="form-row">
                             <label for="first-name" class="form-label">Adults</label>
                             <input type="text"  id="first-name" class="form-textbox " required placeholder="2">
-                            <div class="input-animate"></div>
+
                         </div>
-                        <div class="form-row">
+                        <div id="secondrow" class="form-row">
                             <label for="last-name" class="form-label">Children</label>
                             <input type="text"  id="last-name" class="form-textbox " required placeholder="0">
-                            <div class="input-animate"></div>
                         </div>
                     </div>
                     <div class="form-row">
                     </div>
-                    <div class="button-wrapper">
-                        <button id= "buttonform" class="primary">Submit</button>
+                    <div class="viewmore-container">
+                        <button id= "buttonform" class="button2">Submit</button>
                     </div>
                 </div>
             </form>
