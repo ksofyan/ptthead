@@ -231,41 +231,43 @@ qCursor();
 
 function togglePopupSearch(value) {
 	var popup = document.querySelector('.popup-container');	
-
-	if(!popup) return
-
-	if(value) {
-		popup.classList.add('active')
-	} else {
-		popup.classList.remove('active');
-	}
+	popupBase(popup, value);
 }
 
 
 function togglePopupNavbar(value) {
 	var navpop = document.querySelector('.popup-navbar');
-
-	if(!navpop) return
-		if(value) {
-			navpop.classList.add('active')
-		} else {
-			navpop.classList.remove('active');
-		}
+	popupBase(navpop, value)
 }
 
 function togglePopupBooknow(value) {
 	var bookPop = document.querySelector('.popup-booknow');
+	popupBase(bookPop, value, true)
+}
+
+function togglePopupEat(value) {
+	var eatPop = document.querySelector('.popup-eat');
+	popupBase(eatPop, value, true)
+}
+
+var popupBase = function togglePopup(element, value, navbarWhite = false) {
+	if(!element) return
 	var navbar = document.querySelector('.navbar')
 
-	if(!bookPop) return
-		if(value) {
-			bookPop.classList.add('active')
+	if(value) {
+		element.classList.add('active')
+
+		if(navbarWhite) {
 			navbar.classList.add('white')
-		} else {
-			bookPop.classList.remove('active');
+		}
+	} else {
+		element.classList.remove('active');
+		if(navbarWhite) {
 			navbar.classList.remove('white')
 		}
+	}
 }
+
 
 
 

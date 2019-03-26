@@ -63,6 +63,7 @@
 		</svg>
 	</div>
 
+   <!-- Nav Banner -->
   <div id="navbar" class="navbar "> 
     <nav>
       <a class="logopot" href="#home">
@@ -80,7 +81,7 @@
       <ul class="menu-pages" id="js-menu">
           <li><a href="#experience" class="active">EXPERIENCES</a></li>
           <li><a href="#stay">STAY</a></li>
-          <li><a href="#eat&drink">EAT & DRINK</a></li>
+          <li onclick="togglePopupEat(true)"><a >EAT & DRINK</a></li>
           <li><a href="#shop">SHOP</a></li>
           <li><a href="#journal">JOURNAL</a></li>
           <li class="search" onclick="togglePopupSearch(true)">
@@ -121,9 +122,6 @@
   </div>
 
 	<div id="fullpage">
-
-    <!-- Nav Banner -->
-
 
 		<!-- Home -->
 
@@ -302,8 +300,6 @@
     </section>
   </section>
 
-  
-
     <!-- Stay -->
 
     <section id="stay"  class="section ">
@@ -339,8 +335,6 @@
 	      </div>
       </section>
     </section>
-
-
 
     <!-- Eat & Drink New Page -->
   <section id="eat&drink" class="section white sect three-box"> 
@@ -431,7 +425,7 @@
 
     <!-- Journal -->
 
-    <section id="journal" class="section white sect">
+    <section id="journal" class="section sect white">
       <div class="section_content">
         <div class="wrap-2" >
             <div class="box1">
@@ -464,13 +458,11 @@
 
 
       </div>
-
-
     </section>
 
     <!-- Footer -->
 
-  <section id="footer" class="section sectx white">
+  <section id="footer" class="section sect white">
     <div class="footer-wrap" >
         <div class="pictureRow"> <!-- semua gambar dibawah dari instagram bukan static. -->
                         <img  class="imgfooter" src='assets/img/home/19.jpg' alt="" />
@@ -528,6 +520,8 @@
 
   </section>
 
+    <!-- Popup Search Page -->
+
   <div class="popup-container">
     <div class="popup-wrapper">
            <div class="close" onclick="togglePopupSearch(false)"> <span > <p style="font-size: 2em"> x </p> </span> <span style="margin:1.2em 1em"><p style="text-transform: uppercase; font-size: 0.625em">Close</p></span>
@@ -542,6 +536,7 @@
   
   </div>
 
+  <!-- Popup BookNow Page  -->
   <div class="popup-booknow">
     <div class="popup-wrapper">
       <div class="booknow-container">
@@ -592,6 +587,14 @@
       </div>
 
     </div>
+  </div>
+
+  <!-- Popup Eat Menu Detail Page  -->
+
+  <div class="popup-eat">
+    <div class="popup-wrapper">
+         Test
+    </div> 
   </div>
 
 
