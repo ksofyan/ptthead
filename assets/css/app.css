@@ -855,8 +855,39 @@ max-width: 1280px; }
 	.popup-container .close p {padding: 0;}
 	.popup-container .close {margin:3em 29em;}
 }
+
+.search-preview { display: flex; flex-direction: row; margin-left:13.5%; padding-top: 3.5%; }
+.category-search {display: flex; flex-direction: column; width: 30%; }
+.category-search p {color: black;}
+.title-prev {margin-bottom: 2em;}
+.title-prev p{font-weight: 500; margin-left: 3%;}
+.thumbnail {
+	min-height: 92px;
+	width:84%; 
+	display: flex;
+	 flex-direction: row;}
+ .thumbnail img {
+      height:100%;
+      width:100%;
+      padding:10px;
+     }
+.thumbnail-des {width: 400px; padding-top:1.5em; }
+
+
  /* Room Detail Page - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.flickity-page-dots {
+		  bottom: -22px;
+		}
+/* dots are lines */
+.flickity-page-dots .dot {
+  display: inline-block;
+  background: #333;
+  height: 4px !important;
+  width: 255px !important;
+  margin: 0 !important;;
+  border-radius: 0 !important;;
+}
 .room-wrap { max-width: 1280px; 
 			margin: 0 auto;
 			display: flex;
@@ -864,26 +895,27 @@ max-width: 1280px; }
  }
 .room-wrap , .roomdes{display: flex; flex-direction: column; }
 .room-info {display: flex; flex-direction: row; padding-left: 5%;padding-bottom: 0;
-    margin-top: 10%;}
+    margin-top: 10%; width:100%;}
 .roomdes {width:33%;}
 .room-pages a { color: grey; font-size: 1.5em; 
 	font-family: "Helvetica Neue";
 font-weight: 500;	letter-spacing: 1.5px; }
-.room h2 {font-size: 9em; color: black; text-transform: none; }
+.room h2 {font-size: 7em; color: black; text-transform: none; }
 .room p { margin-bottom: 20%; }
 
 #btn-discover { margin-bottom: 35%; font-size:12px; padding: 5px 10px; }
 
 .room-img img {display: flex; min-height: 194px; max-width: 100%;}
 
-.room-hr {visibility: visible; width: 100%;
-    margin-left: 0 ;}
-.room-hr2 {visibility: visible; width: 18%;
-    margin-left: 0 ;margin-bottom: 3%; border:1px solid #000;}
+.room-hr { width: 100%;
+    margin-left: 0 ; }
+.room-hr2 { width: 18%;
+    margin-left: 0 ;margin-bottom: 4%; border:1px solid #000;}
 .roomtype-nav .room-pages { display: flex; flex-direction: row; justify-content: space-around; }
 .roomtype-nav .room-pages a.active {color:#000;}
-.mobile-room {dispay: none;}
-@media screen and (max-width: 768px) {.mobile-room {display: block;} .room-wrap{display: none;}}
+ @media screen and (max-width: 768px){ 
+  }
+
 
  /* Book Now Pop up Page - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
