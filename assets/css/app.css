@@ -162,6 +162,17 @@ margin-top: 20px;}
 
 }
 
+.btn-discover { 
+    position: relative;
+    height: 24px;
+    width: auto;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    transition: all .2s ease;
+    background-color: white;
+    font-size: 10px;
+    padding: 5px 10px; }
+
 .button:hover {
 	background:#fff;
 	color:#000;
@@ -309,6 +320,7 @@ nav {
 
  .popup-navbar .mob-menu li { margin: 20px; }
 
+
 /* SLIDENAV STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -394,12 +406,11 @@ section {
 	position: relative;
 	background-color: #000;
 }
-
+/*
 .section2 {
 	position:relative;
 	background-color: #fff !important;
-}
-
+}*/
 
 .slide {
 	overflow:hidden;
@@ -856,22 +867,25 @@ max-width: 1280px; }
 	.popup-container .close {margin:3em 29em;}
 }
 
-.search-preview { display: flex; flex-direction: row; margin-left:13.5%; padding-top: 3.5%; }
-.category-search {display: flex; flex-direction: column; width: 30%; }
+.search-preview { display: flex; flex-direction: row; margin: 0 auto; padding-top: 3.5%; max-width:1070px;}
+.category-search {display: flex; flex-direction: column; width: 32%; padding-left:5em; }
 .category-search p {color: black;}
 .title-prev {margin-bottom: 2em;}
 .title-prev p{font-weight: 500; margin-left: 3%;}
 .thumbnail {
 	min-height: 92px;
-	width:84%; 
+	width:100%; 
 	display: flex;
-	 flex-direction: row;}
+	 flex-direction: row;
+	    border-bottom:1px solid rgba(0,0,0,0.15);}
+.thumbnail:last-child{border-bottom: none;}
+
  .thumbnail img {
       height:100%;
-      width:100%;
-      padding:10px;
+      width:40%;
+      padding:1.5em;
      }
-.thumbnail-des {width: 400px; padding-top:1.5em; }
+.thumbnail-des {width: 550px; padding-top:1.5em; }
 
 
  /* Room Detail Page - fullPage.js 
@@ -903,7 +917,7 @@ font-weight: 500;	letter-spacing: 1.5px; }
 .room h2 {font-size: 7em; color: black; text-transform: none; }
 .room p { margin-bottom: 20%; }
 
-#btn-discover { margin-bottom: 35%; font-size:12px; padding: 5px 10px; }
+#btn-room { margin-bottom: 35%; }
 
 .room-img img {display: flex; min-height: 194px; max-width: 100%;}
 
@@ -1024,7 +1038,11 @@ max-width: 1280px;
 	#first-row input {width:19.5em !important;}
 	.booknow-container .title-mobile { padding-top: 30%; }
 	#buttonform{font-size: 12px;}}
- @media screen and (max-width: 1024px){.popup-booknow .booknow-title {left: 90px;}
+ @media screen and (max-width: 1024px){
+ 	.popup-booknow .booknow-title {
+ 		left: 90px;
+ 	}
+ }
 
  /* Pop up Eat menu Detail Page - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1046,14 +1064,105 @@ max-width: 1280px;
 .popup-eat.active {
 	opacity: 1;
 	pointer-events: auto;
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	max-height: 75vh;
 }
 
-.popup-wrapper {
+.menupop-wrapper {
 max-width: 1280px;
 margin:0 auto;}
 
+.menudetail-container
+{position: absolute;
+width: 100%;
+height: 100%; 
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+max-width: 1280px;}
+
+.menudetail-container .menu-info { 
+width: 30%;
+margin:2%;
+ }
+.description * {margin:1em 0;}
+#btn-menu {background: none;}
 
 
+ /* Facilities/Events Detail Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.detail-page {
+max-width: 1280px;
+margin:0 auto;
+padding-top: 14%
+}
+.detail-wrap { 
+display: flex; 
+flex-wrap: wrap;
+width: 100%;
+margin-left: 1.3em }
+
+.detail-info { 
+ width: 49%;
+  height:auto ;
+  padding: 2em 3.5em;
+  box-sizing: border-box;
+  background-clip:content-box; }
+
+
+ .detail-img img{ max-width: 100%;
+ max-height: 100%; }
+ .detail-des { margin: 2em; }
+ .detail-des h2 {color: black; text-transform: none; font-size: 3.5em;}
+ .detail-header h1 { -webkit-text-stroke-color: black; font-size: 5em; margin: 0.9em; }
+ .detail-des p { font-size:12px; margin-bottom: 2em; padding-right: 9em; }
+ .detail-nav .menu-pages {display: flex; flex-direction: row; justify-content: center; margin-top:2em;}
+ .detail-nav .menu-pages li {padding: 1em;}
+ .detail-nav .menu-pages a {color: rgba(0,0,0,0.4); font-size: 18px;}
+ .detail-nav .menu-pages a.active {color: black;}
+ #detail-footer { padding-top: 6em; }
+
+@media screen and (max-width: 768px) {
+	.detail-wrap{margin-left: 0;}
+	.detail-info {width:100% !important;}
+	.detail-header h1{margin:0.4em;}
+	.detail-des p {padding: 0 !important;}
+	.detail-menu {display: block !important}
+	}
+
+
+ /* Room Features Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.room-feature { max-width: 1380px;
+	margin: 0 auto; 
+	position: relative;
+	overflow: hidden;
+	}
+.feature-info{display: flex;}
+.feature-left{flex:1;}
+.feature-des {display: flex; 
+	flex-direction: column; 
+	max-width: 50%; 
+	flex:1; 
+	height:65vh;
+	background:rgba(255,255,255, 0.7);
+    padding-left: 2%;
+}
+.detail-header {padding-top: 10%;}
+
+.features-detail{display: flex; 
+flex-wrap: wrap;
+width: 100%;
+}
+
+
+.features-detail p { width: 35%; padding: 3% 0 !important;
+    margin-left: 7%; font-size: 12px; border-bottom: 1px solid #979797; }
+.features-detail p:last-child{border-bottom: none;}
 
 
 
