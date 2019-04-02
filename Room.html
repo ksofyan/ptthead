@@ -65,8 +65,8 @@
     </svg>
   </div>
 
-   <!-- Nav Banner -->
-  <div id="navbar" class="navbar white"> 
+     <!-- Nav Banner -->
+  <div id="navbar" class="navbar "> 
     <nav>
       <a class="logopot" href="#home">
         <img src='assets/img/global/logo_white.png' class="imglogo light" />
@@ -74,12 +74,16 @@
       </a>
         <div id="nav-toggle">
           <div class="mob-nav" onclick="togglePopupNavbar(true)">
-           <a href="#menu" class="box-shadow-menu"></a>
+               <a href="#menu" class="hamburger light"></a>
+               <a href="#menu" class="hamburger dark" id="hamburger-dark"></a>
           </div>
-          <div class="mob-search"
-           <i class="search-icon" onclick="togglePopupSearch(true)"> <img src="assets/img/home/searchwhite.svg" style="margin: -13px 0.1px;width: 15px;"> </i>
+
+          <div class="search" onclick="togglePopupSearch(true)">
+            <svg viewBox="0 0 12 18">
+              <path d="M11.8962076,13.3880266 L8.97937458,10.4718404 C9.76180971,9.57250554 10.2355289,8.39911308 10.2355289,7.11662971 C10.2355289,4.29356984 7.93878909,2 5.11776447,2 C2.29407851,2 0,4.2962306 0,7.11662971 C0,9.93702882 2.29673985,12.2332594 5.11776447,12.2332594 C6.40053227,12.2332594 7.57418496,11.7596452 8.47371923,10.9773836 L11.3905522,13.8935698 C11.4597472,13.9627494 11.5528942,14 11.6433799,14 C11.7338656,14 11.8270126,13.9654102 11.8962076,13.8935698 C12.0345975,13.7552106 12.0345975,13.5263858 11.8962076,13.3880266 Z M0.71590153,7.11662971 C0.71590153,4.69002217 2.69061876,2.71840355 5.11510313,2.71840355 C7.54224884,2.71840355 9.51430472,4.69268293 9.51430472,7.11662971 C9.51430472,9.5405765 7.54224884,11.5175166 5.11510313,11.5175166 C2.69061876,11.5175166 0.71590153,9.54323725 0.71590153,7.11662971 Z"></path>
+            </svg>
           </div>
-        </div>
+      </div>
       <ul class="menu-pages" id="js-menu">
           <li><a href="#experience" class="active">EXPERIENCES</a></li>
           <li><a href="#stay">STAY</a></li>

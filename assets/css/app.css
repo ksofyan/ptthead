@@ -258,26 +258,35 @@ nav {
 .navbar.white .logopot .light {display: none;}
 .navbar.white .logopot .dark {display: block;}
 .nav-toggle{  display: flex; align-items: center; }
-.box-shadow-menu {position: relative; width: 25px;
+.hamburger {position: relative; width: 25px;
     height: 25px; display: flex;justify-content: center;
     align-items: center;padding-right: 4em;top: 11%;}
-.box-shadow-menu:before {
+.hamburger:before {
   content: "";
   position: absolute;
   border-bottom: 0.7em double white; 
     border-top: 0.15em solid white; 
     height: 0.313em; 
-    width:2em;  
-
+    width:2em; 
+    top:10px; 
 }
 
+.mob-nav .dark:before {
+	border-bottom: 0.7em double black; 
+    border-top: 0.15em solid black; 
+}
+.navbar .mob-nav .dark{display: none;}
+.navbar.white .mob-nav .dark{display: block;}
+.navbar.white .mob-nav .light{display: none;}
 .search-icon img {position: relative; display: block;    padding-left: 3.5em; top: -1.5em;}
-
+#nav-toggle {padding-right: 2em;}
 #nav-toggle { display: none; cursor: pointer; }
+#hamburger-dark{ padding-right: 5em !important; }
 @media screen and  (max-width: 812px) {
 	#nav-toggle {display:flex; flex-direction: row;}
 	#js-menu{display: none;}
 	.booknow{display: none;}
+	.navbar .search svg {top:10px; width:14px;}
 }
 
 /* MOBILE NAV BAR STYLES - fullPage.js 
@@ -1092,13 +1101,13 @@ margin:2%;
 #btn-menu {background: none;}
 
 
- /* Facilities/Events Detail Page
+ /* Facilities Detail Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .detail-page {
 max-width: 1280px;
 margin:0 auto;
-padding-top: 14%
-}
+ padding: 14em 3.3em;}
+
 .detail-wrap { 
 display: flex; 
 flex-wrap: wrap;
@@ -1165,6 +1174,50 @@ width: 100%;
 .features-detail p:last-child{border-bottom: none;}
 
 
+ /* Event Details Page 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.events-page { max-width: 1280px;
+margin: 0 auto; display: flex; flex-direction: row;}
+.nav-category{ display: flex; flex-direction: row; padding-left: 2em;}
+.nav-category span {padding: 1em; font-size: .8em; font-weight: 400;}
+.sub-category *{font-size: 18px; padding-left: 2em; letter-spacing: 1px; line-height:23px; color: rgba(0,0,0,0.4);}
+.sidenav-container, .events-container{ margin:2em; }
+.sub-category{margin-bottom: 5%;}
+#detail-events { display: flex; }
+.event-detail1 { flex-direction:  row; }
+.event-detail2{flex-direction:  row-reverse;}
+.event-des { padding: 0 4.5em;  }
+.events-page h2 { color:black; text-transform: none; font-size: 2.5em; }
+.event-poster{ max-width: 500px; height: 500px; overflow: hidden; padding: 5% 4%;}
+.event-poster img {max-width:100%; height: auto; max-height:100%;
+	object-fit:cover; zoom:2;}
+.sub-category a.active {color: black;}
+.event-des { max-width: 50%; }
+.event-title h3{font-size: 1.5em; margin-bottom: 1em; letter-spacing: 0.8px; font-weight: 400;}
+.event-title h3, .event-detail .time p  {color: rgba(0,0,0,0.4); margin-top: 1em;}
+.event-detail p { color: black;  }
+.event-info p {font-size: 12px; font-weight: 300;	letter-spacing: 1.29px;	line-height: 18px;}
+.event-info *  {margin-top: 1.5em; color: black;}
 
 
+ /* Journal Details Page 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.journal-title p{color: rgba(0,0,0,0.4);}
+.two-col{display: flex; flex-direction: row; max-width: 100%; min-height:400px;}
+.cont-1, .cont-2, .square-con {padding:2em;}
+.three-col {display: flex; flex-direction: row;}
+.cont-2{max-width: 32%;}
+.square-con {max-width: 31.5%;}
+.cont-1{min-width: 62%;}
+.wide-box, .narrow-box {min-height: 300px;}
+.square{ min-height: 300px;}
+.journal-des {margin:0.5em .5em; font-size: 10px; }
+.journal-info{bottom:0;}
+
+#boxes-img {align-items: flex-end;
+    display: flex;
+    position: relative;
+    background-size: cover;}
+
+.journal-title {margin-top: 5%;}
